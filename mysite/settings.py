@@ -4,6 +4,7 @@ import os.path
 #Get the absolute path of the settings.py file's directory
 PWD = os.path.dirname(os.path.realpath(__file__ ))
 
+#DEBUG = False
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
