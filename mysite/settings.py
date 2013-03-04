@@ -1,4 +1,8 @@
 # Django settings for mysite project.
+import os.path
+
+#Get the absolute path of the settings.py file's directory
+PWD = os.path.dirname(os.path.realpath(__file__ ))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -111,6 +115,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PWD, 'templates')
 )
 
 INSTALLED_APPS = (
@@ -123,7 +128,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    'django.contrib.admindocs',
+    #'django.contrib.admindocs',
     'polls',
 )
 
